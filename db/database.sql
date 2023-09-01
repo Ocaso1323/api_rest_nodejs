@@ -6,3 +6,11 @@ CREATE TABLE employee (
     salary INT(5) DEFAULT NULL,
     PRIMARY KEY (id)
 );
+
+DESCRIBE employee;
+
+INSERT INTO employee VALUES 
+(1, 'faiver', 1000),
+(2, 'ronald', 1500),
+(3, 'andrew', 2000),
+(4, 'adriana',2500); 
