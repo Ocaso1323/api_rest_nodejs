@@ -1,15 +1,15 @@
 import { Router } from "express";
-import { getEmployees, createEmployees, updateEmployees, deleteEmployees } from "../controllers/employees.controller.js";
-const router = Router()
+import { getEmployees, createEmployees, updateEmployees, deleteEmployees, getEmployee } from '../controllers/employees.controller.js'
 
-router.get('/employees',getEmployees)
+const router = Router();
 
-router.get('/employees/:id',getEmployees)
+// Define your routes here
+router.get('/employees', getEmployees)
+router.get('/employees/:id', getEmployee)
+router.post('/employees', createEmployees)
+router.put('/employees/:id', updateEmployees)
+router.delete('/employees/:id', deleteEmployees)
 
-// router
-router.post('/employees',createEmployees)
-router.put('/employees',updateEmployees)
-router.delete('/employees',deleteEmployees)
 
 
 export default router
